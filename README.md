@@ -44,7 +44,7 @@ Quick Installation
 ------------
 In Bash:
 
-`curl https://github.com/theredkoala21/mailinabox/blob/master/setup.sh | sudo bash`
+`curl https://raw.githubusercontent.com/theredkoala21/mailinabox/master/setup.sh | sudo bash`
 
 or
 
