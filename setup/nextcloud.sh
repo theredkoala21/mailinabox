@@ -26,15 +26,22 @@ InstallNextcloud() {
 	echo
 
         # Download and verify
-        wget_verify https://download.nextcloud.com/server/releases/nextcloud-$version.zip $hash /tmp/nextcloud.zip
+        # WAY TOO SLOW
+        # wget_verify https://download.nextcloud.com/server/releases/nextcloud-$version.zip $hash /tmp/nextcloud.zip
+        
+        git clone https://github.com/theredkoala21/nextcloud-mirror
 
 	# Remove the current owncloud/Nextcloud
 	rm -rf /usr/local/lib/owncloud
 
 	# Extract ownCloud/Nextcloud
-	unzip -q /tmp/nextcloud.zip -d /usr/local/lib
-	mv /usr/local/lib/nextcloud /usr/local/lib/owncloud
-	rm -f /tmp/nextcloud.zip
+	# unzip -q /tmp/nextcloud.zip -d /usr/local/lib
+	
+	mv nextcloud-mirror/nextcloud-17.0.2/nextcloud /usr/local/lib/owncloud
+	# mv /usr/local/lib/nextcloud /usr/local/lib/owncloud
+	# rm -f /tmp/nextcloud.zip
+	
+	rm -rf nextcloud-mirror/
 
 	# The two apps we actually want are not in Nextcloud core. Download the releases from
 	# their github repositories.
