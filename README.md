@@ -40,6 +40,19 @@ It also includes:
 
 For more information on how Mail-in-a-Box handles your privacy, see the [security details page](security.md).
 
+Quick Installation
+------------
+In Bash:
+
+`curl https://github.com/theredkoala21/mailinabox/blob/master/setup.sh | sudo bash`
+
+or
+
+`curl https://mailinabox.email/setup.sh | sudo bash`
+
+
+
+
 Installation
 ------------
 
